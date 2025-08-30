@@ -55,3 +55,40 @@
     señala que está en español, charset="utf-8" especifica la codificación de caracteres 
     del recurso, y rel="help" describe la relación del enlace con el documento actual. -->
 
+<!--2.f) -->
+    <table width="200" summary="Datos correspondientes al ejercicio vencido">
+        <caption align="top"> Título </caption>
+        <tr>
+             <th scope="col">&nbsp;</th>
+             <th scope="col">A</th>
+             <th scope="col">B</th>
+             <th scope="col">C</th>
+        </tr>
+        <tr>
+             <th scope="row">1º</th>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <th scope="row">2º</th>
+             <td>&nbsp;</td> 
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+        </tr>
+    </table>
+    <!--El código de la tabla se coloca en el <body> y genera una tabla de 3 columnas (A, B, 
+    C) y 2 filas de datos, con un título arriba.
+    El elemento <table> define la tabla. Usa el atributo width="200" que indica el ancho en
+    píxeles y summary="Datos correspondientes al ejercicio vencido" que brinda una descripción 
+    para accesibilidad. Ambos son opcionales.
+    El elemento <caption> muestra el título de la tabla. El atributo align="top" indica que 
+    la posición del título es arriba. También es opcional.
+    El elemento <tr> define cada fila.
+    El elemento <th> define los encabezados. Tiene el atributo scope="col" cuando se aplica 
+    a columnas y scope="row" cuando se aplica a filas. Estos atributos son opcionales, 
+    pero útiles para la accesibilidad.
+    El elemento <td> define las celdas de datos. En este caso contienen &nbsp;, que 
+    representa un espacio en blanco.
+    Los elementos obligatorios son <table>, <tr> y <td>/<th>. El resto de los atributos
+    son opcionales-->

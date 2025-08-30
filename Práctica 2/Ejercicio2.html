@@ -1,0 +1,33 @@
+<!-- 
+p#normal {
+font-family: arial,helvetica;
+font-size: 11px;
+font-weight: bold;
+}
+*#destacado {
+border-style: solid;
+border-color: blue;
+border-width: 2px;
+}
+#distinto {
+background-color: #9EC7EB;
+color: red;
+} -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<p id="normal">Este es un párrafo</p>
+<p id="destacado">Este es otro párrafo</p>
+<table id="destacado"><tr><td>Esta es una tabla</td></tr></table>
+<p id="distinto">Este es el último párrafo</p>
+</body>
+</html>
+
+<!-- En el código presentado se definen tres reglas CSS que se aplican a distintos elementos del documento HTML mediante identificadores (id).
+La primera regla corresponde al selector p#normal, que afecta únicamente al párrafo con el atributo id="normal". Las declaraciones incluidas son: font-family: arial,helvetica;, que indica que la tipografía utilizada será Arial o, en su defecto, Helvetica; font-size: 11px;, que establece un tamaño de letra pequeño; y font-weight: bold;, que aplica negrita al texto. El efecto visual es que ese párrafo aparece en Arial/Helvetica, tamaño 11 píxeles y en negrita.
+La segunda regla corresponde al selector #destacado, que aplica a cualquier elemento con id="destacado". Sus declaraciones son: border-style: solid;, que define un borde continuo; border-color: blue;, que establece el color azul para dicho borde; y border-width: 2px;, que le da un grosor de dos píxeles. Esta regla se aplica en dos casos: un párrafo con id destacado y una tabla con el mismo id, de manera que ambos elementos presentan un borde azul sólido de 2 píxeles de espesor.
+La tercera regla corresponde al selector #distinto, que afecta al párrafo con id="distinto". Contiene las declaraciones: background-color: #9EC7EB;, que coloca un color de fondo celeste, y color: red;, que asigna el color rojo al texto. El efecto visual es un párrafo resaltado con fondo celeste y letras rojas. -->

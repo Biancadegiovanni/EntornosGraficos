@@ -1,0 +1,30 @@
+1. ¿ Qué es CSS y para qué se usa?
+    CSS (Cascading Style Sheets u Hojas de Estilo en Cascada) es un lenguaje que permite separar el contenido de una página web de su presentación. Sirve para definir cómo se muestran los elementos HTML: colores, tipografía, márgenes, posiciones, fondos, alineaciones y otros aspectos visuales.
+
+2. CSS utiliza reglas para las declaraciones de estilo, ¿cómo funcionan?
+    Una regla CSS está compuesta por un selector y un bloque de declaración. El selector indica qué elementos HTML se verán afectados, y dentro del bloque se incluyen propiedades y valores que definen su aspecto.
+
+3. ¿ Cuáles son las tres formas de dar estilo a un documento?
+    Nivel de elemento HTML (inline): usando el atributo style directamente en una etiqueta.
+    Nivel de página (interna): escribiendo las reglas dentro de un bloque <style> en la cabecera del documento.
+    Nivel externo (archivo .css): colocando las reglas en un archivo independiente enlazado con <link>. Esta es la forma más recomendada.
+
+4. ¿ Cuáles son los distintos tipos de selectores más utilizados? Ejemplifique cada uno.
+    Por etiqueta: afecta a todas las etiquetas de ese tipo. Ej: p {color: blue;}
+    Por clase: se aplica a elementos con un atributo class. Ej: .destacado {font-weight: bold;}
+    Por id: se aplica a un único elemento con un atributo id. Ej: #principal {text-align: center;}
+    Agrupados: permiten aplicar un estilo a varios selectores. Ej: h1, h2, h3 {color: red;}
+
+5. ¿ Qué es una pseudo-clase? Cuáles son las más utilizadas aplicadas a vínculos?
+    Una pseudo-clase define un estado especial de un elemento. En los enlaces se utilizan principalmente:
+    a:link → estilo para un enlace no visitado.
+    a:visited → estilo para un enlace ya visitado.
+    a:hover → estilo al pasar el mouse por encima.
+    a:active → estilo cuando el enlace está siendo clicado.
+
+6. ¿ Qué es la herencia?
+    La herencia en CSS significa que ciertos estilos aplicados a un elemento padre se transmiten automáticamente a sus elementos hijos. Por ejemplo, si se define el color de texto en el body, todos los párrafos y títulos dentro de él adoptarán ese color salvo que se sobreescriba.
+
+7. ¿ En qué consiste el proceso denominado cascada?
+    La cascada es el mecanismo que usa CSS para decidir qué reglas aplicar cuando hay varias que afectan al mismo elemento. Se basa en un orden de prioridad: primero se consideran las reglas más específicas (por id sobre clase, y clase sobre etiqueta), luego el orden en el que aparecen y finalmente las reglas marcadas con !important.
+    

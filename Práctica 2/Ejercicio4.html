@@ -1,0 +1,48 @@
+<!-- * {color:green; }
+a:link {color:gray }
+a:visited{color:blue }
+a:hover {color:fuchsia }
+a:active {color:red }
+p {font-family: arial,helvetica;font-size: 10px;color:black; }
+.contenido{font-size: 14px;font-weight: bold; }-->
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+
+<body>
+<p class="contenido" style="font-weight: normal;">
+Este es un texto ...............</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con un
+enlace</a></td>
+</tr>
+</table>
+</body>
+<!-- El <p> tiene la clase .contenido, que en principio lo haría negrita y 14px, pero el atributo style (style="font-weight: normal;") sobrescribe esa regla → el párrafo se ve normal (no negrita), 14px, negro.
+El texto de la tabla aparece en verde (por * {color: green}) porque no está dentro de <p> ni tiene color definido.
+El enlace (<a>) aparece gris (si no fue visitado), cambia a fucsia al pasar el mouse y a rojo mientras se hace clic.-->
+
+<body class="contenido">
+<p> Este es un texto................</p>
+<table>
+<tr>
+<td>Y esta es una tabla.......</td>
+</tr>
+<tr>
+<td><a href="http://www.google.com.ar">con
+un enlace</a></td>
+</tr>
+</table>
+</body>
+<!--Ahora la clase "contenido" está aplicada al <body>, por lo que todos los elementos heredan 14px y negrita (excepto donde se sobreescriba).
+El <p> además recibe las reglas del selector p: tipografía Arial/Helvetica, tamaño 10px, color negro. Pero, por la cascada, prevalece .contenido {font-size:14px; font-weight:bold;} → el párrafo se ve en Arial, 14px, negrita, negro.
+El texto dentro de <td> también hereda la clase del <body> → verde y negrita (verde por *, negrita y 14px por .contenido).
+El enlace funciona igual que en el caso anterior (gris, azul si visitado, fucsia al pasar, rojo al hacer clic).-->

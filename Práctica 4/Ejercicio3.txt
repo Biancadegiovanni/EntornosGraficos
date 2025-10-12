@@ -1,0 +1,54 @@
+a)
+<html>
+<head><title>Documento 1</title></head>
+<body>
+<?php
+ echo "<table width = 90% border = '1' >";
+ $row = 5;
+ $col = 2;
+ for ($r = 1; $r <= $row; $r++) {
+ echo "<tr>";
+ for ($c = 1; $c <= $col;$c++) {
+ echo "<td>&nbsp;</td>\n";
+ } echo "</tr>\n";
+ }
+ echo "</table>\n";
+?>
+</body></html>
+
+El código es una pagina html con un titulo "Documento 1". Muestra una tabla con un ancho en pixeles "90%" y borde = 1. 
+Hay 2 variables: row y col, row comienza con un valor de 5 y col con un valor de 2
+En el for se declara la variable r que comienza con valor igual a 1, mientras que $r < $row, aumenta el valor de r en uno e imprime una fila.
+Luego hay otro for con una nueva variable c que comienza con valor igual a 1, mientras que $c < $col, aumenta el valor de c en uno e imprime una celda con un esoacio indivisible.
+
+
+b)
+<html>
+<head><title>Documento 2</title></head>
+<body>
+<?php
+if (!isset($_POST['submit'])) {
+?>
+ <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+ Edad: <input name="age" size="2">
+ <input type="submit" name="submit" value="Ir">
+ </form>
+<?php
+ }
+else {
+ $age = $_POST['age'];
+ if ($age >= 21) {
+ echo 'Mayor de edad';
+ }
+ else {
+ echo 'Menor de edad';
+ }
+}
+?>
+</body></html>
+
+El código muestra una página HTML titulada “Documento 2”.
+Al ingresar por primera vez, aparece un formulario que solicita la edad del usuario.
+Cuando se envía el formulario, PHP toma el valor ingresado, lo guarda en $age y muestra un mensaje según el valor:
+Si la edad es 21 o más, imprime “Mayor de edad”.
+Si es menor a 21, imprime “Menor de edad”.

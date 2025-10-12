@@ -1,0 +1,33 @@
+<?php
+function doble($i) {
+ return $i*2;
+}
+$a = TRUE;
+$b = "xyz";
+$c = 'xyz';
+$d = 12;
+echo gettype($a);
+echo gettype($b);
+echo gettype($c);
+echo gettype($d);
+if (is_int($d)) {
+ $d += 4;
+}
+if (is_string($a)) {
+ echo "Cadena: $a";
+}
+$d = $a ? ++$d : $d*3;
+$f = doble($d++);
+$g = $f += 10;
+echo $a, $b, $c, $d, $f , $g;
+?> 
+
+Variables: $a (boolean), $b (string), $c (string), $d (interger), $f (interger), $g (interger)
+Operadores: * (multiplicación) += (suma y asigna) ++ (incremento en 1) ?: (ternario, verdadero o falso)
+Funciones y parámetros: 
+Función: doble Parámetro: $i
+Función: gettype Parámetro: $a, $b, $c, $d
+Función: is_int Parámetro: $d
+Función: is_string Parámetro: $a
+Estructuras de control: if
+Salida por pantalla: booleanstringstringinteger1xyzxyz184444

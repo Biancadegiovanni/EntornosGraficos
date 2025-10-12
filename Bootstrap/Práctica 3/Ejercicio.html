@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Práctica 3 - Layout con Bootstrap</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+  <div class="container mt-4">
+
+    <!-- Fila 1: Header -->
+    <div class="row mb-3">
+      <div class="col-12 header"></div>
+    </div>
+
+    <!-- Fila 2: Sidebar + Contenido -->
+    <div class="row g-3">
+      
+      <!-- Sidebar -->
+      <div class="col-12 col-md-3 sidebar d-flex flex-column gap-3">
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#miModal">
+          Abrir configuración
+        </button>
+        <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#formModal">
+          Formulario de contacto
+        </button>
+      </div>
+      
+      <!-- Contenido principal -->
+      <div class="col-12 col-md-9">
+        <div class="row g-3">
+          
+          <!-- Bloque verde -->
+          <div class="col-12">
+            <div class="verde">
+              <div class="alert alert-success m-0" role="alert">
+                Hola
+              </div>
+            </div>
+          </div>
+          
+          <!-- Fila de 4 cards -->
+          <div class="col-12">
+            <div class="row g-3">
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Imagen cualquiera">
+                  <div class="card-body">
+                    <h5 class="card-title">Título 1</h5>
+                    <p class="card-text">Texto descriptivo.</p>
+                    <a href="#" class="btn btn-primary">Link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Imagen cualquiera">
+                  <div class="card-body">
+                    <h5 class="card-title">Título 2</h5>
+                    <p class="card-text">Texto descriptivo.</p>
+                    <a href="#" class="btn btn-primary">Link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Imagen cualquiera">
+                  <div class="card-body">
+                    <h5 class="card-title">Título 3</h5>
+                    <p class="card-text">Texto descriptivo.</p>
+                    <a href="#" class="btn btn-primary">Link</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-12 col-md-3">
+                <div class="card">
+                  <img src="https://via.placeholder.com/300x150" class="card-img-top" alt="Imagen cualquiera">
+                  <div class="card-body">
+                    <h5 class="card-title">Título 4</h5>
+                    <p class="card-text">Texto descriptivo.</p>
+                    <a href="#" class="btn btn-primary">Link</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bloque celeste simple -->
+          <div class="col-12 col-md-6">
+            <div class="celeste"></div>
+          </div>
+          
+          <!-- Celeste con slider -->
+          <div class="col-12 col-md-6">
+            <div id="carouselExampleIndicators" class="carousel slide celeste" data-bs-ride="carousel">
+              <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"></button>
+              </div>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="https://via.placeholder.com/600x300?text=Imagen+1" class="d-block w-100" alt="Imagen 1">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://via.placeholder.com/600x300?text=Imagen+2" class="d-block w-100" alt="Imagen 2">
+                </div>
+                <div class="carousel-item">
+                  <img src="https://via.placeholder.com/600x300?text=Imagen+3" class="d-block w-100" alt="Imagen 3">
+                </div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+              </button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+  <!-- Modal Configuración -->
+  <div class="modal fade" id="miModal" tabindex="-1" aria-labelledby="miModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="miModalLabel">Configuración</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          Aquí puedes realizar tus cambios.
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+          <button type="button" class="btn btn-success" data-bs-dismiss="modal">Guardar cambios</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal Formulario de contacto -->
+  <div class="modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="formModalLabel">Formulario de Contacto</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" class="form-control" id="nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="telefono" class="form-label">Teléfono</label>
+              <input type="text" class="form-control" id="telefono">
+            </div>
+            <div class="mb-3">
+              <label for="asunto" class="form-label">Asunto</label>
+              <input type="text" class="form-control" id="asunto" required>
+            </div>
+            <div class="mb-3">
+              <label for="mensaje" class="form-label">Cuerpo del mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Enviar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

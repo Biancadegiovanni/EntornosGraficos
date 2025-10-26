@@ -1,0 +1,52 @@
+Consulta a una base de datos: Para comenzar la comunicación con un servidor de base de datos MySQL, es
+necesario abrir una conexión a ese servidor. Para inicializar esta conexión, PHP ofrece la función: mysqli_connect (mysql_connect)
+
+Todos sus parámetros son opcionales, pero hay tres de ellos que generalmente son necesarios: $hostname , $nombreUsuario , $contraseña
+
+Una vez abierta la conexión, se debe seleccionar una base de datos para su uso, mediante la función: mysqli_select_db (mysql_select_db)
+
+Esta función debe pasar como parámetro: $nombreConexión, $nombreBaseDatos
+
+La función mysqli_query () se utiliza para: Esta función nos permite ejecutar una consulta a la base de datos que especifiquemos.
+
+y requiere como parámetros: $nombreConexion, "Consulta aquí". Donde "Consulta aquí" se refiere a una consulta realizada utilizando el lenguaje SQL de consultas a bases de datos.
+
+La cláusula or die() se utiliza para: Captura el error
+
+y la función mysqli_error () se puede usar para: obtener el mensaje del último error de MySQL
+
+Si la función mysqli_query() es exitosa, el conjunto resultante retornado se almacena en una variable, por ejemplo
+$vResultado, y a continuación se puede ejecutar el siguiente código (explicarlo):
+
+<?php
+while ($fila = mysqli_fetch_array($vResultado))
+{
+?>
+<tr>
+ <td><?php echo ($fila[0]); ?></td>
+ <td><?php echo ($fila[1]); ?></td>
+ <td><?php echo ($fila[2']); ?></td>
+</tr>
+<tr>
+ <td colspan="5">
+<?php
+}
+mysqli_free_result($vResultado);
+mysqli_close($link);
+?>
+
+El conjunto de resultados (filas devueltas) se guarda en la variable $vResultado.
+mysqli_fetch_array($vResultado) obtiene una fila del resultado de la consulta y la guarda en $fila
+El while recorre todas las filas: en cada iteración obtiene una nueva fila hasta que no quedan más y devuelve false, saliendo del bucle.
+<tr> abre una fila en la tabla.
+<td> crea una celda.
+<?php echo ($fila[0]); ?> imprime el valor de la primera columna del registro actual.
+Lo mismo con las posiciones [1] y [2], que corresponden a la segunda y tercera columna.
+<tr>
+ <td colspan="5">
+Eso crea una nueva fila con una celda que ocupa 5 columnas (colspan="5"), pero no se cierra ni tiene contenido, por lo que probablemente es un error o un fragmento incompleto. En un código correcto, debería eliminarse o completarse.
+
+mysqli_free_result($vResultado);
+Libera la memoria que ocupaba el conjunto de resultados ($vResultado), ya que ya no se va a usar.
+mysqli_close($link);
+Cierra la conexión con la base de datos MySQL.
